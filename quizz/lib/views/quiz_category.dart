@@ -26,13 +26,17 @@ class QuizCategoryScreen extends StatelessWidget {
         }
 
         return Scaffold(
+          extendBodyBehindAppBar: true,
           appBar: AppBar(
             title: const Text('Start your quiz'),
             automaticallyImplyLeading: false,
           ),
           body: Stack(
+            fit: StackFit.expand,
             children: [
-              SvgPicture.asset('assets/bg.svg'),
+              SvgPicture.asset(
+                'assets/bg.svg',
+              ),
               GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),

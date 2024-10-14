@@ -29,6 +29,7 @@ class AdminCategoryItem extends StatelessWidget {
     print(allCategory.docID);
   }
 
+  @override
   Widget build(BuildContext context) {
     void showDeleteDialog(BuildContext context) {
       showDialog(
