@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "532346363833",
+    "project_id": "quizzapp-e8d46",
+    "storage_bucket": "quizzapp-e8d46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532346363833:android:0fa217cf8aa469db98a068",
+        "android_client_info": {
+          "package_name": "com.example.app.firefly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmehOnvPnP69p7AaGgvsHrXTi9UTlyA78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

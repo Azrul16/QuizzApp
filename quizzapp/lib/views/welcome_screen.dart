@@ -59,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                     if (userName == 'Admin' || userName == 'admin') {
                       Get.to(() => const AdminDashboard());
                     } else {
-                      Get.to(() => const QuizCategoryScreen());
+                      Get.to(() => QuizCategoryScreen());
                     }
                   },
                   child: Container(
