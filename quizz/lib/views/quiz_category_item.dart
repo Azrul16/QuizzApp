@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quizzapp/models/category_model.dart';
+import 'package:quizzapp/views/question_page.dart';
 
 class QuizCategoryItem extends StatelessWidget {
   const QuizCategoryItem(this.allCategory,
@@ -15,9 +17,15 @@ class QuizCategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: GestureDetector(
-        onTap: () {},
+    return GestureDetector(
+      onTap: () {
+        Get.to(
+          QuestionPage(
+            docID: allCategory.docID,
+          ),
+        );
+      },
+      child: Card(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
