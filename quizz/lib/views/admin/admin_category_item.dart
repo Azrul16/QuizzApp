@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizzapp/models/category_model.dart';
-import 'package:quizzapp/views/admin/admin_question_screen.dart';
+import 'package:quizzapp/views/admin/question_list.dart';
 
 class AdminCategoryItem extends StatelessWidget {
   const AdminCategoryItem(
@@ -62,9 +62,9 @@ class AdminCategoryItem extends StatelessWidget {
       onTap: () {
         print('Gesture detector detected');
         Get.to(
-          AdminQuestionScreen(
-            title: allCategory.title,
+          QuestionList(
             docID: allCategory.docID,
+            title: allCategory.title,
           ),
         );
       },
