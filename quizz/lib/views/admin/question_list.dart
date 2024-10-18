@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_dialogs/dialogs.dart';
+import 'package:material_dialogs/widgets/buttons/icon_button.dart';
+import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 import 'package:quizzapp/views/admin/admin_question_screen.dart';
 
 class QuestionList extends StatefulWidget {
@@ -25,6 +28,21 @@ class _QuestionListState extends State<QuestionList> {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> delete(String qID) async {
+      try {
+        await FirebaseFirestore.instance
+            .collection('category')
+            .doc(widget.docID)
+            .collection('Questions')
+            .doc(qID)
+            .delete();
+      } catch (error) {
+        print('Error deleting class: $error');
+      }
+      print(qID);
+      Get.back();
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Questions List'),
@@ -84,9 +102,40 @@ class _QuestionListState extends State<QuestionList> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Dialogs.bottomMaterialDialog(
+                                    msg:
+                                        'Are you sure? you want to delete this question?',
+                                    title: 'Delete',
+                                    context: context,
+                                    // ignore: deprecated_member_use
+                                    actions: [
+                                      IconsOutlineButton(
+                                        onPressed: () {
+                                          Get.back();
+                                        },
+                                        text: 'Cancel',
+                                        iconData: Icons.cancel_outlined,
+                                        textStyle:
+                                            const TextStyle(color: Colors.grey),
+                                        iconColor: Colors.grey,
+                                      ),
+                                      IconsButton(
+                                        onPressed: () async {
+                                          await delete(documents[index].id);
+                                        },
+                                        text: 'Delete',
+                                        iconData: Icons.delete,
+                                        color: Colors.red,
+                                        textStyle: const TextStyle(
+                                            color: Colors.white),
+                                        iconColor: Colors.white,
+                                      ),
+                                    ],
+                                  );
+                                },
                                 icon: const Icon(Icons.delete)),
                           ],
                         ),

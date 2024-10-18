@@ -30,8 +30,20 @@ class QuizCategoryItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(Icons.question_answer),
-            Text(allCategory.title),
-            Text(allCategory.subTitle),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              allCategory.title,
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              allCategory.subTitle,
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),

@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAmehOnvPnP69p7AaGgvsHrXTi9UTlyA78',
-    appId: '1:532346363833:android:dbf8c5237aea73e298a068',
-    messagingSenderId: '532346363833',
-    projectId: 'quizzapp-e8d46',
-    storageBucket: 'quizzapp-e8d46.appspot.com',
+    apiKey: 'Your API key',
+    appId: 'Your app id',
+    messagingSenderId: 'Your messege sender ID',
+    projectId: 'Your Project ID',
+    storageBucket: 'Your Storage Bucket',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBAtwvR9jp3TnC4QQtN-T8HMT_9DewetGQ',
-    appId: '1:532346363833:ios:b918ca07d1fb6c0898a068',
-    messagingSenderId: '532346363833',
-    projectId: 'quizzapp-e8d46',
-    storageBucket: 'quizzapp-e8d46.appspot.com',
+    apiKey: 'Your API key',
+    appId: 'Your app id',
+    messagingSenderId: 'Your messege sender ID',
+    projectId: 'Your Project ID',
+    storageBucket: 'Your Storage Bucket',
     iosBundleId: 'com.example.quizz',
   );
 }

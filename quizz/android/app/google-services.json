@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "532346363833",
-    "project_id": "quizzapp-e8d46",
-    "storage_bucket": "quizzapp-e8d46.appspot.com"
+    "project_number": "703919359875",
+    "project_id": "quiz-app-39cdf",
+    "storage_bucket": "quiz-app-39cdf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:532346363833:android:0fa217cf8aa469db98a068",
-        "android_client_info": {
-          "package_name": "com.example.app.firefly"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAmehOnvPnP69p7AaGgvsHrXTi9UTlyA78"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:532346363833:android:dbf8c5237aea73e298a068",
+        "mobilesdk_app_id": "1:703919359875:android:33cdeae3143e3cd86d98b6",
         "android_client_info": {
           "package_name": "com.example.quizz"
         }
@@ -34,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAmehOnvPnP69p7AaGgvsHrXTi9UTlyA78"
+          "current_key": "AIzaSyDoCsjpr1M-Ekc0afHm_Slpl_alqZMzslk"
         }
       ],
       "services": {
